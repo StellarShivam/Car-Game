@@ -98,7 +98,7 @@ function start() {
     }
     window.requestAnimationFrame(playGame);
     let car = document.createElement("div");
-    car.innerText = "Car";
+    // car.innerText = "Car";
     car.setAttribute("class", "car");
     gameArea.appendChild(car);
     player.x = car.offsetLeft;
@@ -106,6 +106,7 @@ function start() {
     for (let x = 0; x < 3; x++) {
         let enemy = document.createElement("div");
         enemy.classList.add("enemy");
+        enemy.innerHTML = "<br>" + (x + 1);
         enemy.y = ((x + 1) * 600) * -1;
         enemy.style.top = enemy.y + "px";
         enemy.style.left = Math.floor(Math.random() * 150) + "px";
