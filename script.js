@@ -3,6 +3,8 @@ const startScreen = document.querySelector(".startScreen");
 const gameArea = document.querySelector(".gameArea");
 let keys = { ArrowUp: false, ArrowDown: false, ArrowRight: false, ArrowLeft: false };
 let player = { speed: 5, score: 0 };
+const acce = new Audio('acce.mp3');
+const crash = new Audio('crash.mp3');
 
 startScreen.addEventListener("click", start);
 document.addEventListener("keydown", pressOn);
@@ -81,6 +83,8 @@ function pressOff(event) {
 function endGame() {
     player.start = false;
     score.innerHTML = "Game Over<br>Score was " + player.score;
+    acce.pause();
+    crash.play();
     startScreen.classList.remove("hide");
 }
 function start() {
@@ -89,6 +93,8 @@ function start() {
     gameArea.innerHTML = "";
     player.start = true;
     player.score = 0;
+    crash.pause();
+    acce.play();
     for (let x = 0; x < 10; x++) {
         let div = document.createElement("div");
         div.classList.add("line");
