@@ -2,24 +2,36 @@
     display: none;
 }
 
-.car,
 .enemy {
     position: absolute;
     bottom: 100px;
     margin: auto;
     width: 50px;
     height: 100px;
-    background-color: blue;
+    line-height: 42px;
     font-size: 2em;
     text-align: center;
     vertical-align: middle;
-    background-image: url(car.png);
+    background-image: url(car1.png);
+    background-size: cover;
+}
+
+.car {
+    position: absolute;
+    bottom: 100px;
+    margin: auto;
+    width: 50px;
+    height: 100px;
+    font-size: 2em;
+    text-align: center;
+    vertical-align: middle;
+    background-image: url(car2.png);
     background-size: cover;
 }
 
 .gameArea {
     background-color: black;
-    width: 200px;
+    width: 400px;
     height: 45rem;
     overflow: hidden;
     position: relative;
@@ -30,7 +42,7 @@
     position: absolute;
     height: 100px;
     width: 10px;
-    margin-left: 95px;
+    margin-left: 195px;
     ;
     background-color: white;
 }
@@ -46,9 +58,17 @@
 }
 
 .startScreen {
+    position: absolute;
+    background-color: red;
+    left: 39%;
+    top: 100px;
+    color: white;
+    z-index: 1;
     text-align: center;
     border: 1px solid red;
     padding: 15px;
     margin: auto;
-    width: 300px;
+    width: 20%;
+    font-family: sans-serif;
+
 }

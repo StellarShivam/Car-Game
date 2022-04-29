@@ -28,7 +28,7 @@ function moveEnemy(car) {
         }
         if (item.y >= 1500) {
             item.y = -600;
-            item.style.left = Math.floor(Math.random() * 150) + "px";
+            item.style.left = Math.floor(Math.random() * 350) + "px";
             item.style.backgroundColor = randomColor();
         }
         item.y += player.speed;
@@ -109,7 +109,7 @@ function start() {
         enemy.innerHTML = "<br>" + (x + 1);
         enemy.y = ((x + 1) * 600) * -1;
         enemy.style.top = enemy.y + "px";
-        enemy.style.left = Math.floor(Math.random() * 150) + "px";
+        enemy.style.left = Math.floor(Math.random() * 350) + "px";
         enemy.style.backgroundColor = randomColor();
         gameArea.appendChild(enemy);
     }
